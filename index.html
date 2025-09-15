@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School Years Left</title>
+    <script>
+        function askYearsLeft() {
+            let input = prompt("How many years do you have left in school?");
+            
+            // Försöker konvertera input till ett heltal
+            let years = parseInt(input);
+
+            // Kontrollera om det är ett giltigt nummer och om det inte är negativt
+            if (isNaN(years) || years < 0) {
+                alert("Please type a correct number.");
+                return; // Avslutar funktionen tidigt
+            }
+
+            // Ger svar beroende på hur många år som är kvar
+            switch (years) {
+                case 0:
+                    alert("Congratulations! You have finished school!");
+                    break;
+                case 1:
+                    alert("Nearly there!");
+                    break;
+                case 2:
+                    alert("Still learning!");
+                    break;
+                case 3:
+                    alert("Sucks to be you :)");
+                    break;
+                default:
+                    alert("I hope you are kidding...");
+            }
+        }
+
+        // Kör funktionen när sidan laddas
+        window.onload = askYearsLeft;
+    </script>
+</head>
+<body>
+</body>
+</html>
